@@ -31,6 +31,7 @@ function gameResultMessage(message){
 }
 
 const computerSelectedSign = computerSignGenerator();
+const delay = 25;
 
 userChild.forEach((ele) => {
 
@@ -39,25 +40,35 @@ userChild.forEach((ele) => {
         userSelectedSign = imgLink.target.className.split(" ")[0].trim();
         // game logic
         if(computerSelectedSign === userSelectedSign){
-            gameResultMessage("Tie");
-
+            setTimeout(() =>{
+                gameResultMessage("Tie");
+            }, delay);
         }
 
         else if(computerSelectedSign == "rock" && userSelectedSign == "scissors" ){
-            gameResultMessage("You Lose");
+            setTimeout( () =>{
+                gameResultMessage("You Lose");
+            }, delay);
+
         }
 
         else if(computerSelectedSign == "scissors" && userSelectedSign == "paper" ){
-            gameResultMessage("You Lose");
+            setTimeout( () =>{
+                gameResultMessage("You Lose");
+            }, delay);
         }
 
 
         else if(computerSelectedSign == "paper" && userSelectedSign == "rock" ){
-            gameResultMessage("You Lose");
+            setTimeout( () =>{
+                gameResultMessage("You Lose");
+            }, delay);
         }
 
         else{
-            gameResultMessage("You Win");
+            setTimeout( () =>{
+                gameResultMessage("You Win");
+            }, delay);
         }
         revealComputerResult(computerSelectedSign);
     });
@@ -68,13 +79,6 @@ userChild.forEach((ele) => {
         choseImgUser.setAttribute("src", imgLink.srcElement.currentSrc);
 
     });
-
-    // ele.addEventListener("mouseout", (imgLink) => {
-    //     choseImgUser = document.querySelector(".chosen-img-user");
-    //     choseImgUser.style.display = "none";
-    // });
-
-
 });
 
 document.querySelector(".btn").addEventListener("click", ()=>{
