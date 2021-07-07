@@ -69,14 +69,25 @@ body {
 .chosen-img-holder {
   margin: 0 5rem;
   align-self: center;
-}
-
-.chosen-img {
-  display: block;
   background-color: var(--iconBackground);
   border: 3px solid transparent;
   border-radius: 50%;
   padding: 0.5rem;
+  height:227px;
+  width: 227px;
+  
+}
+
+.chosen-img{
+  width: 200px;
+}
+
+.chosen-img-computer{
+  display: none;
+}
+
+.chosen-img-user{
+  display: none;
 }
 
 .btn {
@@ -187,10 +198,12 @@ img:hover {
   }
 
   .chosen-img {
-    display: block;
-    max-width: 7rem;
+  width: 170px;
+  margin: 0 auto;
+  }
+  .chosen-img-holder{
+    /* max-width: 7rem; */
     background-color: var(--iconBackground);
-    border: 3px solid transparent;
     border-radius: 50%;
     padding: 0.5rem;
   }
@@ -227,7 +240,7 @@ img:hover {
   }
 
   .btn {
-    width: 75%;
+    width: 90%;
     font-size: 1.2rem;
     margin: 1rem auto;
     padding: 1rem 1.5rem;
