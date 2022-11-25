@@ -168,6 +168,12 @@ img:hover {
   pointer-events: initial;
 }
 
+.social a i{
+  margin-top: 4rem;
+  color: white;
+  width: 2.5rem;
+}
+
 @media screen and (max-width: 1100px) {
   .main-section {
     flex-direction: column;
